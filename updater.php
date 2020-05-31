@@ -12,7 +12,7 @@ if(!($newPass === $newPass2)){
     $errFlag=1;
 }
 
-$data = mysqli_connect('localhost', "root", '', 'database');
+$data = mysqli_connect('localhost', "root", '', 'CV');
 if ( !$data ) {
     mysql_close($data);
     $errFlag=1;
