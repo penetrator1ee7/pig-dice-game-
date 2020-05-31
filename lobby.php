@@ -12,7 +12,7 @@
 $errFlag=1;
 if(isset($_COOKIE['Cookie'])) {
     $errFlag = 0;
-    $data = mysqli_connect('localhost', "root", '', 'database');
+    $data = mysqli_connect('localhost', "root", '', 'CV');
     if (!$data) {
         $errFlag = 1;
         header('HTTP/1.1 302 Redirect');
