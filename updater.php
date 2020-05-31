@@ -1,4 +1,5 @@
 <?php
+include('connection.php');
 $pass=$_GET['password'];
 $newPass=$_GET['newPassword'];
 $newPass2=$_GET['newPassword2'];
@@ -12,7 +13,7 @@ if(!($newPass === $newPass2)){
     $errFlag=1;
 }
 
-$data = mysqli_connect('localhost', "root", '', 'CV');
+//$data = mysqli_connect('localhost', "root", '', 'CV');
 if ( !$data ) {
     mysql_close($data);
     $errFlag=1;

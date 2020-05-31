@@ -1,4 +1,5 @@
 <?php
+include('connection.php');
 $pass=$_GET['password'];
 $name=$_GET['username'];     //LOGIN SHALL BE UNIQUE
 $pass2=$_GET['password2'];
@@ -13,7 +14,7 @@ $errFlag=1;
 }
 
 
-$data = mysqli_connect('localhost', "root", '', 'CV');
+//$data = mysqli_connect('localhost', "root", '', 'CV');
 if ( !$data ) {
 mysql_close($data);
 echo "no";

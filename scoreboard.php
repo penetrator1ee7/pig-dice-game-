@@ -23,7 +23,8 @@
     </tr>
     </thead>
 <?php
-$data = mysqli_connect('localhost', "root", '', 'CV');
+include('connection.php');
+//$data = mysqli_connect('localhost', "root", '', 'CV');
 if (!$data) {
     header('HTTP/1.1 302 Redirect');
     header('Location: loginPage.php?alert=database'); // cannot connect to mysql database

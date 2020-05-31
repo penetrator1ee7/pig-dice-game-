@@ -26,12 +26,13 @@
     <div class="row justify-content-center">
         <div class="col-6" >
 <?php
+include('connection.php');
 $errFlag=1;
 setcookie('game',1,time()+60*5);
 if(isset($_COOKIE['Cookie'])){
 
     $errFlag = 0;
-    $data = mysqli_connect('localhost', "root", '', 'CV');
+//    $data = mysqli_connect('localhost', "root", '', 'CV');
     if (!$data) {
         $errFlag = 1;
         header('HTTP/1.1 302 Redirect');
