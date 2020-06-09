@@ -7,7 +7,6 @@ $foundFlag=1;
 $time=date('y/m/d H:i:s',time()+60*60*24*30);
 $tmptime=date('Y-m-d H:i:s',time());
 
-//$data = mysqli_connect('localhost', "serv", '', 'CV');
 if ( !$data ) {
 $errFlag=1;
 header('HTTP/1.1 302 Redirect');
