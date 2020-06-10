@@ -14,7 +14,6 @@ $errFlag=1;
 }
 
 
-//$data = mysqli_connect('localhost', "root", '', 'CV');
 if ( !$data ) {
 mysql_close($data);
 echo "no";
@@ -49,11 +48,7 @@ if(!mysqli_query($data,$query)) echo mysqli_error($data) . ' line 38';
 $passHash=hash('sha256',$pass.$salt);
 $query="INSERT INTO users (login,pass_h,pass_s,pass_exp) value ('$name','$passHash','$salt','$time')" ;
 if(!mysqli_query($data, $query)) echo mysqli_error($data) . ' line 41';
-/*$test = "SELECT pass_exp FROM users";
-$result  =  mysqli_query( $data,  $test );
-if(!$result) echo mysqli_error($data) . ' line 37';
-$row = mysqli_fetch_row($result);
-echo $row[0];*/
+
 
 if(isset($_GET['remember'])){
 //mysqli_query($data,'DROP TABLE tokens');  //DROP
@@ -77,8 +72,7 @@ ECHO "COOKIE SET";
 $result=mysqli_query($data,"SELECT auth_token FROM tokens");
 if(!$result) echo mysqli_error($data) . ' line 75';
 $test=mysqli_fetch_row($result);
-//echo $test[0] . "\n";
-//echo $cookie;
+
 }
 header('HTTP/1.1 302 Redirect');
 header('Location: userPage.php');
