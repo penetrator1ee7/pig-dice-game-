@@ -9,7 +9,7 @@
 ```   
 * Load Database from dump
 ``` 
-    mysql -h DBHOST -u DBUSER -pDBPASS DBNAME < backup/data.sql
+    mysql -h DBHOST -u DBUSER -pDBPASS DBNAME < backup/database.sql
 ```
 * Generate documentation
  ``` 
