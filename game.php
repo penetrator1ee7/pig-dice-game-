@@ -28,6 +28,24 @@
 <?php
 include('connection.php');
 $errFlag=1;
+/**
+ * @OA\Info(title="My First API", version="1.0.0")
+ */
+/**
+ * @OA\Get(
+ *     path="/game",
+ *     @OA\Response(response="200", description="Ok")
+ *     @OA\Response(response="400", description="Bad Request")
+ *     @OA\Response(response="403", description="Forbidden")
+ *
+ * @OA\Put(
+ *     path="/game",
+ *     @OA\Response(response="200", description="Ok")
+ *     @OA\Response(response="400", description="Bad Request")
+ *     @OA\Response(response="403", description="Forbidden")
+
+ * )
+ */
 setcookie('game',1,time()+60*5);
 if(isset($_COOKIE['Cookie'])){
 
