@@ -1,5 +1,7 @@
 <?php
 include('connection.php');
+
+
 $pass=$_GET['password'];
 $name=$_GET['username'];
 $errFlag=0;
